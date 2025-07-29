@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nguyễn Lê Huy Hoàng Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+   <header>
+  <nav class="navbar">
+    <div class="logo">Huy Hoàng</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+    
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <p class="hello-line">
+       <span class="hello-text">Hello</span><span class="hello-dot">.</span>
+      </p>
+      <h1>I'm Nguyễn Lê Huy Hoàng</h1>
+      <h2>Embedded Systems Developer</h2>
+      <div class="buttons">
+  <a href="https://www.fiverr.com/huy_hoang2005/buying?source=avatar_menu_profile" target="_blank">
+    <button class="btn-primary">Commission Something!</button>
+  </a>
+  <a href="https://github.com/ireilay" target="_blank">
+    <button class="btn-outline">My resume</button>
+  </a>
+</div>
+
+    </div>
+    <div class="hero-image">
+      <img src="images/huyhoang.png" alt="Huy Hoàng" />
+    </div>
+  </section>
+
+  <section class="skills">
+    <ul>
+      <li>C/C++</li>
+      <li>Microcontrollers</li>
+      <li>RTOS</li>
+      <li>CAN Bus</li>
+      <li>UART/I2C/SPI</li>
+      <li>Embedded Linux</li>
+      <li>MATLAB/Simulink</li>
+    </ul>
+  </section>
+
+  <section class="about">
+    <div class="services">
+  <div class="service-item">
+    <div class="icon">
+      <img src="images/firmware.png" alt="Firmware Icon">
+    </div>
+    <p>Firmware Development</p>
+  </div>
+  <div class="service-item">
+    <div class="icon">
+      <img src="images/embeddedc.png" alt="Embedded C/C++ Icon">
+    </div>
+    <p>Embedded C</p>
+  </div>
+  <div class="service-item">
+    <div class="icon">
+      <img src="images/communication.jpg" alt="Communication Protocols Icon">
+    </div>
+    <p>Communication Protocols</p>
+  </div>
+</div>
+    <div class="about-text" id="Skills">
+      <h2>About me</h2>
+      <p>I specialize in building reliable, efficient, and low-level systems on microcontrollers and embedded Linux platforms. My passion lies in connecting hardware and software, optimizing performance, and solving real-world engineering challenges.</p>
+      <div class="stats">
+        <div><strong>6+</strong><br>Completed Projects</div>
+        <div><strong>95%</strong><br>Client Satisfaction</div>
+        <div><strong>1</strong><br>Years of Experience</div>
+      </div>
+    </div>
+  </section>
+  <section class="projects" id="projects">
+  <h2>Projects</h2>
+  <p class="projects-intro">
+    Here are a few selected embedded systems projects I've worked on.
+  </p>
+
+  <div class="project-slider">
+    <button class="slider-btn prev">&#10094;</button>
+
+    <!-- Add this viewport wrapper -->
+    <div class="slider-viewport">
+
+      <div class="slider-track">
+        
+        <div class="project-card">
+          
+          <h3>Smart Home Sensor Hub</h3>
+          <p>A low-power STM32-based system collecting environmental data via I2C sensors and communicating over UART/BLE to a central controller.</p>
+          <a href="https://github.com/ireilay/smart-home-hub" target="_blank">View on GitHub →</a>
+        </div>
+
+        <div class="project-card">
+          <h3>CAN Bus Data Logger</h3>
+          <p>An automotive-grade CAN Bus logger using an NXP MCU that stores communication frames on an SD card, including filtering & timestamping.</p>
+          <a href="https://github.com/ireilay/can-logger" target="_blank">View on GitHub →</a>
+        </div>
+
+        <div class="project-card">
+          <h3>RTOS-based Robot Controller</h3>
+          <p>Multithreaded control system using FreeRTOS for real-time scheduling of motor control, sensor polling, and serial command parsing.</p>
+          <a href="https://github.com/ireilay/robot-rtos" target="_blank">View on GitHub →</a>
+        </div>
+        <div class="project-card">
+          <h3>IoT Plant Monitor with LoRa & OLED</h3>
+          <p>An ultra-low-power system measuring soil moisture, temp, and humidity. Sends data via LoRa to a remote base station and displays status on OLED.</p>
+          <a href="https://github.com/ireilay/robot-rtos" target="_blank">View on GitHub →</a>
+        </div>
+        <div class="project-card">
+          <h3>FPGA-Based Signal Analyzer</h3>
+          <p>An FPGA module for high-speed waveform capture and signal classification, controlled by an STM32 or Linux SBC over SPI.</p>
+          <a href="https://github.com/ireilay/robot-rtos" target="_blank">View on GitHub →</a>
+        </div>
+     
+        <div class="project-card">
+          <h3>Battery Management System</h3>
+          <p>A modular battery monitor using I2C ADCs and fault detection, designed for scalability in energy storage applications.</p>
+          <a href="https://github.com/ireilay/bms" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="slider-btn next">&#10095;</button>
+  </div>
+  <div class="slider-dots"></div>
+</section>
+
+
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch for opportunities, collaborations, or just to say hi, feel free to reach out below.</p>
+
+    <div class="contact-methods">
+      <div class="contact-item">
+        <strong>Email:</strong>
+        <a href="mailto:kidshyboy2347@gmail.com">kidshyboy2347@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <strong>GitHub:</strong>
+        <a href="https://github.com/ireilay" target="_blank">github.com/ireilay</a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

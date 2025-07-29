@@ -1,0 +1,474 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f1117;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #13141a;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* subtle shadow */
+}
+
+
+.navbar .logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px; /* Increased spacing between nav items */
+  margin-right: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;           /* Slightly larger font size */
+  padding: 10px 18px;        /* More padding for clickable area */
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect with glow */
+.nav-links li a:hover {
+  background-color: #ff4d5a;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 77, 90, 0.6);
+  transform: translateY(-2px);
+}
+
+
+.nav-links li {
+  cursor: pointer;
+}
+
+
+
+.nav-links li a:visited,
+.nav-links li a:focus,
+.nav-links li a:active {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+
+
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+}
+
+.hero-text h2 {
+  font-size: 28px;
+  font-weight: 300;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary {
+  background-color: #ff4d5a;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: none;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+/* Skills */
+.skills ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background-color: #1a1b21; /* Keep this if you like it, or change to something darker like #13141a or #0f1117 for more fade effect */
+  list-style: none;
+  flex-wrap: wrap; /* Added for responsiveness - essential for horizontal lists */
+}
+
+/* UPDATED SECTION FOR FADING SKILL WORDS */
+.skills li {
+  color: #A0AEC0; /* Light gray for faded effect. Adjust this value! */
+  font-size: 1.2em; /* Slightly larger font size for readability */
+  font-weight: 300; /* Lighter font weight for a more 'faded' appearance */
+  white-space: nowrap; /* Prevents individual skill words from wrapping */
+  padding: 5px 10px; /* Add a little padding if you want them to behave like tabs/pills later */
+}
+
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Adjust spacing between items */
+  position: relative; /* Needed for positioning the line and circles */
+  padding-left: 50px; /* Space for the vertical line and circles */
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  left: 20px; /* Adjust to align with circles */
+  top: 0;
+  bottom: 0;
+  width: 2px; /* Thickness of the line */
+  background-color: #ff4b2b; /* Color of the line */
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  color: #ffffff; /* Text color */
+}
+
+.service-item::before {
+  content: '';
+  position: absolute;
+  left: -30px; /* Position the circle relative to the item start */
+  width: 12px; /* Size of the circle */
+  height: 12px; /* Size of the circle */
+  background-color: #ff4b2b; /* Color of the circle */
+  border-radius: 50%;
+  z-index: 1; /* Ensure circle is above the line */
+}
+
+.service-item .icon img {
+  width: 32px; /* Adjust icon size as needed */
+  height: 32px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(200%) contrast(100%); /* Example to make icons white if they are dark */
+}
+
+.service-item p {
+  font-size: 1.1rem; /* Adjust font size */
+  margin: 0; /* Remove default paragraph margin */
+}
+
+.about-text {
+  max-width: 600px;
+}
+
+.about-text h2 {
+  margin-bottom: 10px;
+}
+.about-text p {
+  color: #ccc; /* Ensure the paragraph text is not affected by bold/orange styling */
+}
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  /* You might want to align the text within each stat column */
+  text-align: left; /* Align text to the left within each stat div */
+}
+
+.stats div strong {
+  font-size: 2.5em; /* Make the numbers significantly larger */
+  color: #ff4b2b; /* Orange color for the numbers */
+  display: block; /* Make strong tag a block to separate from the text below */
+  margin-bottom: 5px; /* Space between the number and the text */
+}
+
+/* Contact */
+.contact {
+  background-color: #13141a;
+  color: #ffffff;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-item {
+  font-size: 16px;
+}
+
+.contact-item a {
+  color: #ff4d5a;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+/* Buttons - default */
+.btn-primary,
+.btn-outline {
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Primary button */
+.btn-primary {
+  background-color: #ff4b2b;
+  color: white;
+}
+
+/* Primary hover */
+.btn-primary:hover {
+  background-color: #e84326;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 75, 43, 0.4);
+}
+
+/* Outline button */
+.btn-outline {
+  background-color: transparent;
+  color: #ff4b2b;
+  border: 2px solid #ff4b2b;
+}
+
+/* Outline hover */
+.btn-outline:hover {
+  background-color: #ff4b2b;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 75, 43, 0.4);
+}
+.hello-line {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hello-text {
+  font-weight: bold;
+}
+
+.hello-dot {
+  color: #ef4444; /* Tailwind red-500 */
+  font-size: 36px;
+  line-height: 1;
+  margin-left: 4px;
+}
+.projects {
+  padding: 60px 40px;
+  background-color: #13141a;
+  color: white;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.projects p {
+  color: #cfcfcf;
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+}
+
+/* Slider Container */
+.project-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-viewport {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.slider-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Card Style */
+.project-card {
+  flex: 0 0 300px;
+  background-color: #1a1b21;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+.project-card h3 {
+  color: #ff4d5a;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #d0d0d0;
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  color: #ff4d5a;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+/* Arrows */
+.slider-btn {
+  background-color: #ff4d5a;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 14px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: background-color 0.3s;
+}
+
+.slider-btn:hover {
+  background-color: #ff2e40;
+}
+
+.slider-btn.prev {
+  position: absolute;
+  left: 10px; /* Was -20px */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-btn.next {
+  position: absolute;
+  right: 10px; /* Was -20px */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .project-card {
+    flex: 0 0 250px;
+  }
+
+  .slider-btn.prev,
+  .slider-btn.next {
+    left: 5px;
+    right: 5px;
+  }
+}
+.slider-viewport {
+  overflow: hidden;
+  width: 100%;
+  max-width: 960px; /* Or however wide you want 3 cards + spacing */
+  margin: 0 auto;
+}
+section {
+  border-bottom: 1px solid #1f1f25;
+  padding-bottom: 60px;
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #444;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background-color: #ff4d5a;
+}
+
